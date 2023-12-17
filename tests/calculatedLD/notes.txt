@@ -1,0 +1,8 @@
+
+sparse -ld -g ../generatedPlink/sim_len-10MB_samples-20k/data -w 100000 -o sim_len-10MB_samples-20k/sparse/sparse.ld.out > sim_len-10MB_samples-20k/sparse/sparse.ld.log
+gcta --bfile ../../generatedPlink/sim_len-10MB_samples-5k/data --ld-score --ld-wind 100 --out gcta/gctald
+
+conda activate ldsc
+python2 ./ldsc.py --bfile ../../Projects/Sparse/tests/generatedPlink/sim_len-10MB_samples-5k/data --out ../../Projects/Sparse/tests/calculatedLD/sim_len-10MB_samples-5k/ldsc --l2 --ld-wind-kb 100.0
+
+/Users/alden/Desktop/Genomics/Projects/Sparse/tests/generatedPlink/sim_len-50MB_samples-10k_snplim-30k
